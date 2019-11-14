@@ -1,9 +1,9 @@
 #pragma once
-#include "Shape.h"
+#include "Mesh.h"
 
 
 class Cuboid :
-	public Shape
+	public Mesh
 {
 public:
 	Cuboid(float sizeX = 1, float sizeY = 1, float sizeZ = 1);

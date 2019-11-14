@@ -1,10 +1,8 @@
-#ifndef _SHAPE_H
-#define _SHAPE_H
-
+#pragma once
 #include "GameObject.h"
 
 
-class Shape :
+class Mesh :
 	public GameObject
 {
 protected:
@@ -13,8 +11,8 @@ protected:
 	float* texcoords;
 	int indexCount;
 	bool useIndexArray = false;
-	GLushort* indices;
+	GLuint* indices;
+	GLenum faceMode = GL_TRIANGLES;
 
 	void render() override;
 };
-#endif

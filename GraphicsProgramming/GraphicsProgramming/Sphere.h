@@ -1,9 +1,9 @@
 #pragma once
-#include "Shape.h"
+#include "Mesh.h"
 
 
 class Sphere :
-	public Shape
+	public Mesh
 {
 public:
 	Sphere(int _segments = 16, int _rings = 8, float radius = 1);

@@ -12,7 +12,8 @@ Sphere::Sphere(int segments, int rings, float radius)
 	texcoords = new float[vertexCount * 2];
 	indexCount = segments * rings * 4;
 	useIndexArray = true;
-	indices = new GLushort[indexCount];
+	indices = new GLuint[indexCount];
+	faceMode = GL_QUADS;
 
 	// Generate the verts, norms and texcoords
 	for (int ring = 0; ring < rings + 1; ring++)
@@ -50,9 +51,9 @@ Sphere::Sphere(int segments, int rings, float radius)
 			int index = ring * segments + segment;
 			int firstVertex = ring * (segments + 1) + segment;
 			indices[index * 4] = firstVertex;
-			indices[index * 4 + 1] = firstVertex + segments + 1;
+			indices[index * 4 + 1] = firstVertex + 1;
 			indices[index * 4 + 2] = firstVertex + segments + 1 + 1;
-			indices[index * 4 + 3] = firstVertex + 1;
+			indices[index * 4 + 3] = firstVertex + segments + 1;
 		}
 	}
 }

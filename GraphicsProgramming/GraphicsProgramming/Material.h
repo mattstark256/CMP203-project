@@ -17,7 +17,7 @@ public:
 	void setAmbientAndDiffuse(float r, float g, float b, float a);
 	void setSpecular(float r, float g, float b, float a);
 	void setShininess(float s);
-	void setTexture(const char* filePath);
+	void setTexture(const char* fileName);
 
 private:
 	GLfloat ambient[4] = { 1.0, 1.0, 1.0, 1.0 };

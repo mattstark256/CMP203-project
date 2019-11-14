@@ -29,6 +29,7 @@ void GameObject::transformAndRender()
 	glRotatef(rotation.y, 0, 1, 0);
 	glRotatef(rotation.x, 1, 0, 0);
 	glRotatef(rotation.z, 0, 0, 1);
+	glScalef(scale.x, scale.y, scale.z);
 
 	render();
 
@@ -60,6 +61,19 @@ void GameObject::setRotation(Vector3 _rotation)
 }
 
 
+Vector3 GameObject::getScale()
+{
+	return scale;
+}
+
+
+void GameObject::setScale(Vector3 _scale)
+{
+	scale = _scale;
+}
+
+
 void GameObject::render()
 {
 }
+

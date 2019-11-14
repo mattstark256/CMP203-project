@@ -26,6 +26,8 @@ Scene::Scene(Input* in)
 	glEnable(GL_LIGHTING);
 	glEnable(GL_TEXTURE_2D);
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+	glEnable(GL_CULL_FACE); // Don't draw backfaces
+	glEnable(GL_NORMALIZE); // Fix normals on scaled objects
 
 
 	// Initialise scene variables
@@ -35,7 +37,7 @@ Scene::Scene(Input* in)
 
 	TestObject* testObject = new TestObject();
 	testObject->setPosition(Vector3(1, 0, 0));
-	testObject->setRotation(Vector3(0, 0, 20));
+	testObject->setRotation(Vector3(0, -90, 0));
 	gameObjects.push_back(testObject);
 
 	testObject = new TestObject();
@@ -44,7 +46,7 @@ Scene::Scene(Input* in)
 	gameObjects.push_back(testObject);
 
 	Light* light = new Light(GL_LIGHT0);
-	light->setPosition(Vector3(0, 1, 2));
+	light->setPosition(Vector3(0, 2, 2));
 	light->setAttenuation(1, 0.3, 0);
 	gameObjects.push_back(light);
 }

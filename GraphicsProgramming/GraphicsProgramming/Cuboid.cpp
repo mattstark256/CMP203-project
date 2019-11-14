@@ -6,10 +6,10 @@
 Cuboid::Cuboid(float sizeX, float sizeY, float sizeZ)
 {
 	indexCount = 24;
-
 	verts = new float[indexCount * 3];
 	norms = new float[indexCount * 3];
 	texcoords = new float[indexCount * 2];
+	faceMode = GL_QUADS;
 
 	// I'm pushing elements onto vectors cause it's a bit simpler than keeping track of array indices
 	std::vector<float> vertsVector;

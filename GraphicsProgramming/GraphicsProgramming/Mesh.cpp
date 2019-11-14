@@ -1,7 +1,7 @@
-#include "Shape.h"
+#include "Mesh.h"
 
 
-void Shape::render()
+void Mesh::render()
 {
 		glEnableClientState(GL_VERTEX_ARRAY);
 		glEnableClientState(GL_NORMAL_ARRAY);
@@ -14,11 +14,11 @@ void Shape::render()
 		// For shapes where no vertices are re-used an index array isn't required
 		if (useIndexArray)
 		{
-			glDrawElements(GL_QUADS, indexCount, GL_UNSIGNED_SHORT, indices);
+			glDrawElements(faceMode, indexCount, GL_UNSIGNED_INT, indices);
 		}
 		else
 		{
-			glDrawArrays(GL_QUADS, 0, indexCount);
+			glDrawArrays(faceMode, 0, indexCount);
 		}
 	
 		glDisableClientState(GL_VERTEX_ARRAY);
