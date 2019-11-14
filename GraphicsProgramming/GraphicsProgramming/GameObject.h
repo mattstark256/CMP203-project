@@ -20,6 +20,7 @@ public:
 	void setRotation(Vector3 _rotation);
 	Vector3 getScale();
 	void setScale(Vector3 _scale);
+	void setScale(float _scale);
 
 protected:
 	Vector3 position = Vector3(0, 0, 0);

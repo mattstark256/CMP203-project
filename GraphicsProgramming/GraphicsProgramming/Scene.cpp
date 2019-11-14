@@ -3,6 +3,7 @@
 #include "Camera.h"
 #include "TestObject.h"
 #include "Light.h"
+#include "StillLifeExhibit.h"
 
 
 // Scene constructor, initilises OpenGL
@@ -36,7 +37,7 @@ Scene::Scene(Input* in)
 	gameObjects.push_back(player);
 
 	TestObject* testObject = new TestObject();
-	testObject->setPosition(Vector3(1, 0, 0));
+	testObject->setPosition(Vector3(1, 0, -2));
 	testObject->setRotation(Vector3(0, -90, 0));
 	gameObjects.push_back(testObject);
 
@@ -49,6 +50,11 @@ Scene::Scene(Input* in)
 	light->setPosition(Vector3(0, 2, 2));
 	light->setAttenuation(1, 0.3, 0);
 	gameObjects.push_back(light);
+
+	StillLifeExhibit* stillLife = new StillLifeExhibit();
+	stillLife->setPosition(Vector3(1, 0, 1));
+	stillLife->setRotation(Vector3(0, -90, 0));
+	gameObjects.push_back(stillLife);
 }
 
 

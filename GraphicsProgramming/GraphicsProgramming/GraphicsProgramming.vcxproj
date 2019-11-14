@@ -98,6 +98,7 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="Sphere.cpp" />
+    <ClCompile Include="StillLifeExhibit.cpp" />
     <ClCompile Include="TestObject.cpp" />
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
@@ -113,6 +114,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Sphere.h" />
+    <ClInclude Include="StillLifeExhibit.h" />
     <ClInclude Include="TestObject.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>

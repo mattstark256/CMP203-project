@@ -73,6 +73,14 @@ void GameObject::setScale(Vector3 _scale)
 }
 
 
+void GameObject::setScale(float _scale)
+{
+	scale.x = _scale;
+	scale.y = _scale;
+	scale.z = _scale;
+}
+
+
 void GameObject::render()
 {
 }
